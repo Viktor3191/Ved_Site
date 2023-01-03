@@ -1,3 +1,4 @@
+from .forms import TaskForm
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Task
@@ -16,7 +17,11 @@ def about(request):
 
 
 def create(request):
-    return render(request, 'main/create.html')
+    form = TaskForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'main/create.html', context)
 
 
 def advertising(request):
@@ -24,4 +29,8 @@ def advertising(request):
 
 
 def alternative(request):
-    return render(request, 'main/alternative.html')
+    form = TaskForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'main/alternative.html', context)
