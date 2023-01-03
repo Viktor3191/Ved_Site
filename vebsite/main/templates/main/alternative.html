@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Страница альтернатив
+{% endblock %}
+
+{% block content %}
+    <h1>Страница альтернатив</h1>
+        <from method="post">
+        <input type="text", placeholder="Введите название", class="from-control"><br>
+        <textarea type="text", placeholder="Введите описание", class="from-control"></textarea>><br>
+        <button type="submit", class="btn btn-success">Добавить</button>
+    </from>
+{% endblock %}
