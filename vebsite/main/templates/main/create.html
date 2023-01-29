@@ -5,14 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Создать новую задачу</h1>
-    <from method="post">
-        {% csrf_token %}
-        {{from.title}}
-        {{from.task}}
-        {{from.decision}}
-        <input type="text", placeholder="Введите название", class="from-control"><br>
-        <textarea type="text", placeholder="Введите описание", class="from-control"></textarea>><br>
-        <button type="submit", class="btn btn-success">Добавить</button>
-    </from>
+    <h1>Страница про нас</h1>
+        <from method="post">
+            {% csrf_token %}
+            {{form.title}}<br>
+            {{form.task}}<br>
+            <button type="submit" class="btn btn-success">Добавить</button>
+        </from>
 {% endblock %}
